@@ -1,3 +1,8 @@
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
 *{
   margin: 0;
@@ -167,6 +172,8 @@ i span{
 .wrapper1{
     width: 170px;
     margin: auto;
+}
+  
 }
 @media (min-width: 320px) and (max-width: 480px) {
   
