@@ -168,3 +168,14 @@ i span{
     width: 170px;
     margin: auto;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  //CSS
+  .bg-img{
+  background: url('2.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+  
+}
