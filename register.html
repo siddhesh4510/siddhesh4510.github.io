@@ -1,0 +1,76 @@
+<body>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC4K-P4M3MUCfIfrqbX2KLGndMfJkcwN5o",
+    authDomain: "justprac-1ff10.firebaseapp.com",
+    databaseURL: "https://justprac-1ff10.firebaseio.com",
+    projectId: "justprac-1ff10",
+    storageBucket: "justprac-1ff10.appspot.com",
+    messagingSenderId: "678599145209",
+    appId: "1:678599145209:web:ba89ab2be7115b76549428"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+ 
+</script>
+<script src="iscript.js"></script>
+<header>
+<link rel="stylesheet" href="des.css">
+<link rel="stylesheet" href="homedes.css">
+<div class="wrapper">
+        <div class="logo">
+             <img src="book.png" alt="">
+	     
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+<li><a href="index.html">Log Out</a></li>
+
+</ul>
+</div>
+
+<link rel="stylesheet" href="des.css">
+<div class="container">
+<div class="form-style-10">
+<h1>Fill Up Now!<span>Fill up information related to policy!</span></h1>
+<form>
+    <div class="section"><span>1</span> Name & Mobile No</div>
+    <div class="inner-wrap">
+        <label>Full Name <input type="text" name="field1" id="name" placeholder="First name+Last Name" /></label>
+        <label>Mobile Number <input type="number" id="pho" name="field1" /></label>
+    </div>
+
+    <div class="section"><span>2</span>Policy Number</div>
+    <div class="inner-wrap">
+	<label>Policy Number <input type="number" id="pono" name="field3" /></label>
+    </div>
+
+    <div class="section"><span>3</span>Dates</div>
+        <div class="inner-wrap">
+        <label>Birth Date <input type="date" id="dob"  name="field5" /></label>
+	<label>Policy Start Date <input type="date" id="dos" name="field5" /></label>
+	<label>Policy End Date <input type="date" id="dom" name="field5" /></label>
+        
+    </div>
+    <div class="section"><span>4</span>Health</div>
+    <div class="inner-wrap">
+	<label>Height <input type="number" id="h" name="field3" /></label>
+	<label>Weight <input type="number" id="w" name="field3" /></label>
+    </div>
+    <div class="button-section">
+     <input type="button" onclick="ente()" value="Fill Up" />
+   
+    </div>
+</form>
+</div>
+</div>
+</header>
+</body>

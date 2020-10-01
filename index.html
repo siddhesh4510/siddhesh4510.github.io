@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="ldes.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   
+    <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+	
+    <div class="wrapper1">
+        <div class="logoh">
+            <img src="book.png" alt="">
+        </div>
+     </div>
+        <header>Unlock By Password</header>
+        <form action="#">
+          
+<div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" class="pass-key" required placeholder="Password" id="p">
+            <span class="show">SHOW</span>
+          </div>
+<br><br><br>
+<div class="field">
+            <input type="button" value="LOGIN" onclick="check_pass()">
+          </div>
+</form>
+
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC4K-P4M3MUCfIfrqbX2KLGndMfJkcwN5o",
+    authDomain: "justprac-1ff10.firebaseapp.com",
+    databaseURL: "https://justprac-1ff10.firebaseio.com",
+    projectId: "justprac-1ff10",
+    storageBucket: "justprac-1ff10.appspot.com",
+    messagingSenderId: "678599145209",
+    appId: "1:678599145209:web:ba89ab2be7115b76549428"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+ 
+</script>
+<script>
+function check_pass()
+{
+	var fpass=document.getElementById("p").value;
+	//alert(fpass);
+	var retref=firebase.database().ref("pass");
+    retref.on('value',function(datasnapshot){
+     //  alert(datasnapshot.val());
+        if(datasnapshot.val()==fpass)
+		location.replace("home.html")
+	 document.getElementById("p").value="";
+        document.getElementById("p").placeholder="Invalid ! Enter again";
+        
+    });
+	
+
+}
+
+</script>
+<script>
+      const pass_field = document.querySelector('.pass-key');
+      const showBtn = document.querySelector('.show');
+      showBtn.addEventListener('click', function(){
+       if(pass_field.type === "password"){
+         pass_field.type = "text";
+         showBtn.textContent = "HIDE";
+         showBtn.style.color = "#3498db";
+       }else{
+         pass_field.type = "password";
+         showBtn.textContent = "SHOW";
+         showBtn.style.color = "#222";
+       }
+      });
+    </script>
+  </body>
+</html>
