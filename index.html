@@ -62,8 +62,9 @@ function check_pass()
      //  alert(datasnapshot.val());
         if(datasnapshot.val()==fpass)
 		location.replace("home.html")
+	  else{
 	 document.getElementById("p").value="";
-        document.getElementById("p").placeholder="Invalid ! Enter again";
+        document.getElementById("p").placeholder="Invalid ! Enter again";}
         
     });
 	
